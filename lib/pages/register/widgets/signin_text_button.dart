@@ -19,20 +19,16 @@ class SigninTextButton extends StatelessWidget {
             color: Color(0xFF5D545D),
           ),
         ),
-        InkWell(
-          child: Container(
-            height: 30,
-            alignment: Alignment.center,
-            child: const Text(
-              'Login!',
-              style: TextStyle(
-                fontSize: 14,
-                height: 1.4,
-                color: Color(0xFFFC6650),
-              ),
+        TextButton(
+          onPressed: () => context.go('/login'),
+          child: const Text(
+            'Login!',
+            style: TextStyle(
+              fontSize: 14,
+              height: 1.4,
+              color: Color(0xFFFC6650),
             ),
           ),
-          onTap: () => context.go('/login'),
         ),
       ],
     );

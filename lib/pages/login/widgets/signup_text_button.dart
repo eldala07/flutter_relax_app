@@ -26,20 +26,16 @@ class SignupTextButton extends StatelessWidget {
               color: Color(0xFF5D545D),
             ),
           ),
-          InkWell(
-            child: Container(
-              height: 30,
-              alignment: Alignment.center,
-              child: const Text(
-                'Sign Up!',
-                style: TextStyle(
-                  fontSize: 14,
-                  height: 1.4,
-                  color: Color(0xFFFC6650),
-                ),
+          TextButton(
+            onPressed: () => context.go('/register'),
+            child: const Text(
+              'Sign Up!',
+              style: TextStyle(
+                fontSize: 14,
+                height: 1.4,
+                color: Color(0xFFFC6650),
               ),
             ),
-            onTap: () => context.go('/register'),
           ),
         ],
       ),

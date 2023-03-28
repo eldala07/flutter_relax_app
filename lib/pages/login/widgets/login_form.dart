@@ -109,12 +109,20 @@ class _LoginFormState extends State<LoginForm> {
                 child: Container(
                   alignment: Alignment.center,
                   height: 30,
-                  child: const Text(
-                    'Recover Password',
-                    style: TextStyle(
-                      fontSize: 14,
-                      height: 1.4,
-                      color: Color(0xFF5D545D),
+                  child: Container(
+                    transform: Matrix4.translationValues(10, 0, 0),
+                    child: TextButton(
+                      onPressed: () {
+                        context.go('/recover');
+                      },
+                      child: const Text(
+                        'Recover Password',
+                        style: TextStyle(
+                          fontSize: 14,
+                          height: 1.4,
+                          color: Color(0xFF5D545D),
+                        ),
+                      ),
                     ),
                   ),
                 ),
